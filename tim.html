@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dobrodošli u svet košarke</title>
+  <link rel="stylesheet" href="stil_tim.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="index.html">Početna</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav"></div>
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="galerija.html">Galerija</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tim.html">Tim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/accounts/login/" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="insta-icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<main>
+  <div class="izbor-tima-box">
+    <h1 class="izaberi-naslov">Izaberi tim</h1>
+    <select id="timSelect" class="form-select">
+      <option value="lakers" selected>LA Lakers</option>
+      <option value="celtics">Boston Celtics</option>
+      <option value="bulls">Chicago Bulls</option>
+    </select>
+  </div>
+  
+  <div id="igraciContainer" class="cards-container">
+    
+  </div>
+</main>
+
+
+<footer class="text-center py-3 text-light footer">
+  <p>&copy; 2025 Košarkaški Svet | Izrada sajta: Tara Nedić, 2025</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script >
+    const timovi = {
+  lakers: [
+    {
+      ime: "LeBron James",
+      pozicija: "Small Forward",
+      broj: 6,
+      slika: "slike/lebron.jpg",
+      wiki: "https://en.wikipedia.org/wiki/LeBron_James"
+    },
+    {
+      ime: "Anthony Davis",
+      pozicija: "Power Forward",
+      broj: 3,
+      slika: "slike/davis.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Anthony_Davis"
+    },
+    {
+      ime: "Russell Westbrook",
+      pozicija: "Point Guard",
+      broj: 0,
+      slika: "slike/westbrook.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Russell_Westbrook"
+    },
+    {
+      ime: "Carmelo Anthony",
+      pozicija: "Small Forward",
+      broj: 7,
+      slika: "slike/anthony.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Carmelo_Anthony"
+    },
+    {
+      ime: "Dwight Howard",
+      pozicija: "Center",
+      broj: 39,
+      slika: "slike/howard.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Dwight_Howard"
+    }
+  ],
+  celtics: [
+    {
+      ime: "Jayson Tatum",
+      pozicija: "Small Forward",
+      broj: 0,
+      slika: "slike/tatum.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Jayson_Tatum"
+    },
+    {
+      ime: "Jaylen Brown",
+      pozicija: "Shooting Guard",
+      broj: 7,
+      slika: "slike/brown.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Jaylen_Brown"
+    },
+    {
+      ime: "Marcus Smart",
+      pozicija: "Point Guard",
+      broj: 36,
+      slika: "slike/smart.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Marcus_Smart"
+    },
+    {
+      ime: "Al Horford",
+      pozicija: "Center",
+      broj: 42,
+      slika: "slike/horford.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Al_Horford"
+    },
+    {
+      ime: "Robert Williams",
+      pozicija: "Center",
+      broj: 44,
+      slika: "slike/williams.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Robert_Williams_(basketball)"
+    }
+  ],
+  bulls: [
+    {
+      ime: "Zach LaVine",
+      pozicija: "Shooting Guard",
+      broj: 8,
+      slika: "slike/lavine.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Zach_LaVine"
+    },
+    {
+      ime: "DeMar DeRozan",
+      pozicija: "Small Forward",
+      broj: 11,
+      slika: "slike/derozan.jpg",
+      wiki: "https://en.wikipedia.org/wiki/DeMar_DeRozan"
+    },
+    {
+      ime: "Nikola Vučević",
+      pozicija: "Center",
+      broj: 9,
+      slika: "slike/vucevic.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Nikola_Vučević"
+    },
+    {
+      ime: "Lonzo Ball",
+      pozicija: "Point Guard",
+      broj: 2,
+      slika: "slike/ball.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Lonzo_Ball"
+    },
+    {
+      ime: "Patrick Williams",
+      pozicija: "Small Forward",
+      broj: 44,
+      slika: "slike/williams.jpg",
+      wiki: "https://en.wikipedia.org/wiki/Patrick_Williams_(basketball)"
+    }
+  ]
+};
+
+const container = document.getElementById("igraciContainer");
+const select = document.getElementById("timSelect");
+
+select.addEventListener("change", () => {
+  const tim = select.value;
+  container.innerHTML = ""; 
+
+  if(tim && timovi[tim]){
+    timovi[tim].forEach(igrac => {
+      const card = document.createElement("a");
+      card.href = igrac.wiki;
+      card.target = "_blank"; 
+      card.className = "igrac-card";
+
+      card.innerHTML = `
+        <img src="${igrac.slika}" alt="${igrac.ime}">
+        <h3>${igrac.ime}</h3>
+        <p>${igrac.pozicija} - #${igrac.broj}</p>
+      `;
+
+      container.appendChild(card);
+    });
+  }
+});
+select.dispatchEvent(new Event("change"));
+function promeniPozadinu(tim) {
+  document.body.classList.remove("lakers-pozadina", "celtics-pozadina", "bulls-pozadina");
+
+  if (tim === "lakers") {
+    document.body.classList.add("lakers-pozadina");
+  } else if (tim === "celtics") {
+    document.body.classList.add("celtics-pozadina");
+  } else if (tim === "bulls") {
+    document.body.classList.add("bulls-pozadina");
+  }
+}
+
+promeniPozadinu(select.value);
+
+select.addEventListener("change", () => {
+  const tim = select.value;
+  container.innerHTML = "";
+
+  if(tim && timovi[tim]){
+    timovi[tim].forEach(igrac => {
+      const card = document.createElement("a");
+      card.href = igrac.wiki;
+      card.target = "_blank";
+      card.className = "igrac-card";
+
+      card.innerHTML = `
+        <img src="${igrac.slika}" alt="${igrac.ime}">
+        <h3>${igrac.ime}</h3>
+        <p>${igrac.pozicija} - #${igrac.broj}</p>
+      `;
+
+      container.appendChild(card);
+    });
+  }
+
+  promeniPozadinu(tim);
+});
+</script>
+</body>
+</html>

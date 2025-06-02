@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dodatna stranica</title>
+  <link rel="stylesheet" href="stil.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0px;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #ff6600, #ffcc00, #ff3366, #66ccff);
+      background-size: 400% 400%;
+      animation: gradientAnim 15s ease infinite;
+    }
+
+      
+    @keyframes gradientAnim {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h2 {
+      color: #fd0076;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #da6900;
+      padding-bottom: 5px;
+      margin-top: 50px;
+    }
+    
+    p {
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 0 20px;
+      text-align: justify;
+    }
+    
+
+    .info-section {
+        margin-top: 0;  
+        padding-top: 20px;
+    }
+
+    .section-title {
+      margin-top: 60px;
+      text-align: center;
+      color: #ff0055;
+      font-weight: bold;
+    }
+
+    .kljucna-rec {
+      color: #d60036; 
+      font-weight: bold;
+      font-style: normal; 
+      font-family: 'Arial Black', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="carouselInfo" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselInfo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Pravila igre"></button>
+      <button type="button" data-bs-target="#carouselInfo" data-bs-slide-to="1" aria-label="Zanimljivosti"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h2>Pravila igre</h2>
+              <p><b><i>Košarka</i></b> je <b><i>timski sport</i></b> u kojem dve ekipe od po pet igrača pokušavaju da postignu što više <b><i>poena</i></b> ubacivanjem lopte u protivnički koš. Igra se u četiri <b><i>četvrtine</i></b>, a svaki <b><i>napad</i></b> je vremenski ograničen.</p>
+              <ul>
+                <li><b><i>Svaki koš</i></b> vredi <b><i>2 ili 3 poena</i></b>.</li>
+                <li><b><i>Lopta</i></b> se dribla samo <b><i>rukama</i></b>.</li>
+                <li><b><i>Napad</i></b> traje <b><i>24 sekunde</i></b>.</li>
+                <li><b><i>Prekršaji</i></b> vode do <b><i>slobodnih bacanja</i></b>.</li>
+                <li><b><i>Pobednik</i></b> je tim sa više <b><i>poena</i></b>.</li>
+              </ul>
+
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="slike/pravila.png" class="img-fluid rounded shadow-sm carousel-img" alt="Pravila igre">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="carousel-item">
+        <div class="container py-5">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h2>Zanimljivosti</h2>
+              <p><b><i>Košarka</i></b> je nastala <b><i>1891. godine</i></b>. Danas je jedan od najgledanijih <b><i>sportova</i></b> na planeti. U <b><i>NBA</i></b> ligi nastupaju vrhunski igrači iz celog sveta, a istorija sporta je puna spektakularnih trenutaka i rekorda.</p>
+              <ul>
+                <li><b><i>Košarka</i></b> je <b><i>olimpijski sport</i></b> od <b><i>1936.</i></b></li>
+                <li><b><i>NBA</i></b> je najjača <b><i>košarkaška liga</i></b> na svetu.</li>
+                <li><b><i>Globalna popularnost</i></b> – prati je <b><i>stotine miliona ljudi</i></b>.</li>
+                <li><b><i>Prva košarkaška utakmica</i></b> igrana je sa <b><i>fudbalskom loptom</i></b> i <b><i>korpama za breskve</i></b>.</li>
+              </ul>
+
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="slike/zanimljivostii.webp" class="img-fluid rounded shadow-sm carousel-img" alt="Zanimljivosti">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInfo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Prethodni</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselInfo" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sledeći</span>
+    </button>
+
+
+  </div>
+
+  
+  <div class="container info-section">
+    <h2 class="section-title" id="naslovNajveciTimovi">Najveći timovi svih vremena</h2>
+  <p>
+    <span class="kljucna-rec">Boston Celtics</span> i 
+    <span class="kljucna-rec">Los Angeles Lakers</span> su dva najuspešnija tima u istoriji 
+    <span class="kljucna-rec">NBA lige</span>, sa po 17 osvojenih šampionskih titula. 
+    <span class="kljucna-rec">Celticsi</span> su bili dominantni u prvoj polovini 20. veka, dok su 
+    <span class="kljucna-rec">Lakersi</span> briljirali kroz nekoliko era, uključujući i vreme legendi poput 
+    <span class="kljucna-rec">Kobea Bryanta</span> i 
+    <span class="kljucna-rec">LeBrona Jamesa</span>. 
+    <span class="kljucna-rec">Chicago Bulls</span> su obeležili 1990-te sa šest titula, predvođeni 
+    <span class="kljucna-rec">Michaelom Jordanom</span>, koji je mnogima i danas najbolji igrač svih vremena. 
+    <span class="kljucna-rec">Golden State Warriors</span> su moderni tim poznat po brzom šutu i timskoj igri, dok su 
+    <span class="kljucna-rec">San Antonio Spurs</span> primer dugoročne stabilnosti i vrhunskog trenerskog rada. 
+    Ovi timovi su oblikovali košarkašku istoriju i ostavili neizbrisiv trag na sport.
+  </p>
+
+  <h2 class="section-title">Najpoznatiji igrači</h2>
+  <p>
+    <span class="kljucna-rec">Michael Jordan</span> je često smatran najboljim igračem u istoriji košarke, poznat po svojim neverovatnim 
+    skokovima, preciznom šutu i vođstvu na terenu. 
+    <span class="kljucna-rec">LeBron James</span> je moderna legenda, poznat po svojoj snazi, 
+    svestranosti i sposobnosti da dominira u svim aspektima igre. 
+    <span class="kljucna-rec">Kareem Abdul-Jabbar</span> drži rekord za najviše 
+    postignutih poena u NBA ligi, a njegov 
+    <span class="kljucna-rec">"skyhook"</span> šut je postao ikona sporta. 
+    <span class="kljucna-rec">Magic Johnson</span> je 
+    revolucionisao igru kao plejmejker sa visinom od 2,06 metara, dok je 
+    <span class="kljucna-rec">Larry Bird</span> bio poznat po preciznom 
+    šutu i takmičarskom duhu. Ovi igrači su postavili standarde izvrsnosti i inspirisali generacije širom sveta.
+  </p>
+  </div>
+
+  <div class="navigation-buttons">
+    <a href="index.html" class="btn-custom">Početna</a>
+    <a href="galerija.html" class="btn-custom">Galerija</a>
+    <a href="tim.html" class="btn-custom">Tim</a>
+    <a href="kontakt.html" class="btn-custom">Kontakt</a>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
